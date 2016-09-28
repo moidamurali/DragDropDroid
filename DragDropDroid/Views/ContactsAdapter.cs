@@ -46,6 +46,8 @@ namespace DragDropDroid.Views {
         public bool OnLongClick(View view) {
             ClipData data = ClipData.NewPlainText("", "");
             DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+
+            // TODO: Update to work with non-depracated methods.
             view.StartDrag(data, shadowBuilder, view, 0);
             view.Visibility = ViewStates.Invisible;
             return true;
